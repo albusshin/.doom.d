@@ -48,3 +48,27 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+
+;; org-roam-ui
+;; https://github.com/org-roam/org-roam-ui#doom
+;; Org-roam-ui tries to keep up with the latest features of org-roam,
+;; which conflicts with Doom Emacs's desire for stability.
+;; To make sure nothing breaks, use the latest version of org-roam by unpinning it.
+(unpin! org-roam)
+(package! org-roam-ui)
+
+(use-package! websocket
+    :after org-roam)
+
+(use-package! org-roam-ui
+    :after org-roam ;; or :after org
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
