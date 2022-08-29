@@ -74,3 +74,36 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; master configs
+
+(load "~/.doom.d/configs/base")
+(load "~/.doom.d/configs/org")
+
+(after! org
+  (albusshin/init-org))
+
+(setq doom-variable-pitch-font (font-spec :family "Bookerly")
+      doom-unicode-font (font-spec :family "Symbola"))
+
+(map! :leader
+      :desc "Open inbox org file"
+      "voi" #'albusshin/open-inbox-org-file
+      :desc "Open journal org file"
+      "voj" #'albusshin/open-journal-org-file
+      :desc "Open reminders org file"
+      "vor" #'albusshin/open-reminders-org-file
+      :desc "Open someday org file"
+      "vos" #'albusshin/open-someday-org-file
+      :desc "Open tasks org file"
+      "vot" #'albusshin/open-tasks-org-file
+
+      :desc "Capture inbox item"
+      "vi" #'albusshin/new-inbox-item
+      :desc "Capture reminder item"
+      "vr" #'albusshin/new-reminder-item
+      :desc "Capture journal item"
+      "vj" #'albusshin/journal-item
+      )
+
