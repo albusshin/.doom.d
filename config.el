@@ -84,7 +84,8 @@
 (after! org
   (albusshin/init-org))
 
-(setq doom-variable-pitch-font (font-spec :family "Bookerly")
+(setq doom-font (font-spec :family "Hack Nerd Font Mono")
+      doom-variable-pitch-font (font-spec :family "Bookerly")
       doom-unicode-font (font-spec :family "Symbola"))
 
 (map! :leader
