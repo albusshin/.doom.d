@@ -72,3 +72,14 @@
           org-roam-ui-follow t
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
+
+;; org-alert
+(package! org-alert)
+(use-package! org-alert
+    :after org-roam ;; or :after org
+    :config
+    (lambda ()
+      (org-alert-enable)
+      ; Enable osx notifier if system time is Darwin (MacOS)
+      (if (eq system-type 'darwin)
+          (setq alert-default-style 'osx-notifier))))
