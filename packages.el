@@ -83,3 +83,6 @@
       ; Enable osx notifier if system time is Darwin (MacOS)
       (if (eq system-type 'darwin)
           (setq alert-default-style 'osx-notifier))))
+
+;; tldr
+(package! tldr)
