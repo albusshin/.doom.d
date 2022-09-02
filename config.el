@@ -84,6 +84,8 @@
 ;; leader key
 
 (setq doom-localleader-key ",")
+
+;; org config
 (after! org
   (albusshin/init-org))
 
