@@ -81,6 +81,9 @@
 (load "~/.doom.d/configs/base")
 (load "~/.doom.d/configs/org")
 
+;; leader key
+
+(setq doom-localleader-key ",")
 (after! org
   (albusshin/init-org))
 
