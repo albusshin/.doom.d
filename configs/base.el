@@ -1,6 +1,6 @@
 ;;; configs/base.el -*- lexical-binding: t; -*-
 
-(setq private-directory              (expand-file-name "~/Dropbox/.private"))
+(setq private-directory              (expand-file-name "~/Dropbox/private"))
 
 (setq finance-directory                              (concat private-directory "/finance")
       finance-journal-directory                      (concat finance-directory "/journal")
