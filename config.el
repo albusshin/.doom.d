@@ -23,6 +23,11 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+
+(setq doom-font (font-spec :family "Hack Nerd Font" :size 15)
+      doom-variable-pitch-font (font-spec :family "Bookerly" :size 18)
+      doom-unicode-font (font-spec :family "Hack Nerd Font" :size 15))
+
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -89,9 +94,6 @@
 (after! org
   (albusshin/init-org))
 
-(setq doom-font (font-spec :family "Hack Nerd Font Mono")
-      doom-variable-pitch-font (font-spec :family "Bookerly")
-      doom-unicode-font (font-spec :family "Symbola"))
 
 (map! :leader
       :desc "Open inbox org file"
