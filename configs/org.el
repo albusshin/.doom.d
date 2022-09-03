@@ -85,6 +85,15 @@
 #+title: ${title}\n")
            :immediate-finish t
            :unnarrowed t)
+          ("b" "book" plain
+           "%?"
+           :if-new (file+head "books/${slug}.org"
+                              ":PROPERTIES:
+:CREATED: %U
+:END:
+#+title: ${title}\n")
+           :immediate-finish t
+           :unnarrowed t)
           ("a" "article" plain "%?"
            :if-new
            (file+head "articles/${slug}.org"
