@@ -50,6 +50,7 @@
 ;(unpin! t)
 
 
+(unpin! org)
 ;; org-roam-ui
 ;; https://github.com/org-roam/org-roam-ui#doom
 ;; Org-roam-ui tries to keep up with the latest features of org-roam,
