@@ -135,3 +135,13 @@
       "vj" #'albusshin/journal-item
       )
 
+(defun albusshin/open-txin-fedora-dired ()
+  (interactive) (find-file "/sshx:local-ssh:/home/txin/q/"))
+
+(defun albusshin/open-txin-fedora-q-vendor-oculus ()
+  (interactive) (find-file "/sshx:local-ssh:/home/txin/q/vendor/oculus"))
+
+(map! :leader
+      "vs" #'albusshin/open-txin-fedora-dired
+      "vq" #'albusshin/open-txin-fedora-q-vendor-oculus
+      )
