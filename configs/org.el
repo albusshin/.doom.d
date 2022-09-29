@@ -149,6 +149,11 @@
   (setq org-default-notes-file albusshin/org-file/inbox)
   (setq org-agenda-window-setup 'current-window)
   (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "WONTFIX")))
+  (setq org-agenda-files
+        '("~/org/inbox.org"
+          "~/org/tasks.org"
+          "~/org/reminders.org"))
+
   (setq org-agenda-skip-scheduled-if-done 't)
   (setq org-agenda-span 7)
   (setq org-agenda-start-on-weekday nil)
