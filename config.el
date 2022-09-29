@@ -84,6 +84,7 @@
 ;; master configs
 
 (load "~/.doom.d/configs/base")
+(load "~/.doom.d/configs/lsp-tramp")
 (load "~/.doom.d/configs/org")
 
 ;; leader key
@@ -96,24 +97,7 @@
 
 ;; lsp-tramp
 (after! tramp
-  (require 'lsp-mode)
-
-  (setq tramp-histfile-override nil)
-
-  (setq lsp-enable-snippet nil
-        ;; HACK: to fix the clangd starting forever error
-        ;;lsp-log-io nil
-        lsp-log-io t
-        ;; To bypass the "lsp--document-highlight fails if
-        ;; textDocument/documentHighlight is not supported" error
-        lsp-enable-symbol-highlighting nil)
-
-  (lsp-register-client
-    (make-lsp-client
-     :new-connection (lsp-tramp-connection "clangd")
-     :major-modes '(c-mode c++-mode objc-mode cuda-mode)
-     :remote? t
-     :server-id 'clangd-remote)))
+  (albusshin/init-lsp-tramp))
 
 (map! :leader
       :desc "Open inbox org file"
