@@ -179,11 +179,6 @@
            ((org-agenda-overriding-header "work")))
           ))
 
-  ;; To workaround the issue where the org roam buffer displays links literally
-  ;; HACK is indicated here: https://github.com/org-roam/org-roam/issues/2198#issuecomment-1208072780
-  (setq org-fold-core-style       "overlays")
-
-
   ;; Org roam customizations
 
   (setq-default org-roam-completion-everywhere 't)
