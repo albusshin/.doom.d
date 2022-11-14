@@ -84,6 +84,7 @@
 ;; master configs
 
 (load "~/.doom.d/configs/base")
+(load "~/.doom.d/configs/dap")
 (load "~/.doom.d/configs/lsp-tramp")
 (load "~/.doom.d/configs/org")
 
@@ -129,3 +130,7 @@
       "vs" #'albusshin/open-txin-fedora-dired
       "vq" #'albusshin/open-txin-fedora-s-vendor-oculus
       )
+
+;; dap-mode
+(after! dap-mode
+  (albusshin/init-dap))
