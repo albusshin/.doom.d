@@ -120,12 +120,12 @@
       )
 
 (defun albusshin/open-txin-fedora-dired ()
-  (interactive) (find-file "/sshx:local-ssh:/home/txin/q/"))
+  (interactive) (find-file "/sshx:local-ssh:/home/txin/s/"))
 
-(defun albusshin/open-txin-fedora-q-vendor-oculus ()
-  (interactive) (find-file "/sshx:local-ssh:/home/txin/q/vendor/oculus"))
+(defun albusshin/open-txin-fedora-s-vendor-oculus ()
+  (interactive) (find-file "/sshx:local-ssh:/home/txin/s/vendor/oculus"))
 
 (map! :leader
       "vs" #'albusshin/open-txin-fedora-dired
-      "vq" #'albusshin/open-txin-fedora-q-vendor-oculus
+      "vq" #'albusshin/open-txin-fedora-s-vendor-oculus
       )
