@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(org-roam-directory
    (if (eq system-type 'darwin) "/Users/txin/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/roam/"))
+ '(warning-suppress-types '((auto-save) defvaralias))
  )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
