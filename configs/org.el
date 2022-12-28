@@ -254,6 +254,7 @@
       (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "➤"))))))
 
   (setq prettify-symbols-unprettify-at-point 'right-edge)
+  (setq org-roam-dailies-directory "journals/")
 
   (if (display-graphic-p (selected-frame))
     (add-hook 'org-mode-hook 'prettify-symbols-mode))
